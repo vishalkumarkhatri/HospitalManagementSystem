@@ -9,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @ToString
@@ -18,7 +19,7 @@ import java.time.LocalDate;
         name="patient",
         uniqueConstraints = {
                 @UniqueConstraint(name = "unique_patient_email", columnNames = {"email"}),
-                @UniqueConstraint(name = "unique_patient_name_birthdate", columnNames = {"name", "birthdate"})
+                @UniqueConstraint(name = "unique_patient_name_birthdate", columnNames = {"name", "birthDate"})
         },
         indexes = {
                 @Index(name = "index_patient_birth_date", columnList = "birthDate")
@@ -50,14 +51,10 @@ public class Patient {
     @Column(updatable = false)
     private LocalDate createdAt;
 
-//    @Override
-//    public String toString() {
-//        return "Patient{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", birthDate=" + birthDate +
-//                ", email='" + email + '\'' +
-//                ", gender='" + gender + '\'' +
-//                '}';
-//    }
+    @OneToOne
+    @JoinColumn(name = "patient_insurance_id")
+    private Insurance insurance;
+
+    @OneToMany(mappedBy = "patient")
+    private List<Appointment> appointments;
 }
