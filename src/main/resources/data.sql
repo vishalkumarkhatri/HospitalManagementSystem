@@ -8,3 +8,16 @@ VALUES
 ('Karan Singh', 'Male', '1988-01-25', 'karan.singh@gmail.com', 'A_Positive'),
 ('Neha Verma', 'Female', '1995-09-05', 'neha.verma@gmail.com', 'B_Negative'),
 ('Vikram Joshi', 'Male', '1992-06-11', 'vikram.joshi@gmail.com', 'AB_Negative');
+
+INSERT INTO doctor (name, specialization, email)
+VALUES
+('Dr. Kavita Rao', 'Orthopedic Surgeon', 'kavita.rao@gmail.com'),
+('Dr. Arjun Patel', 'Oncologist', 'arjun.patel@gmail.com'),
+('Dr. Sneha Kapoor', 'Gynecologist', 'sneha.kapoor@gmail.com'),
+('Dr. Manish Verma', 'Psychiatrist', 'manish.verma@gmail.com'),
+('Dr. Ritu Sharma', 'Endocrinologist', 'ritu.sharma@gmail.com'),
+('Dr. Devendra Joshi', 'General Physician', 'devendra.joshi@gmail.com'),
+('Dr. Neha Bansal', 'Radiologist', 'neha.bansal@gmail.com'),
+('Dr. Rohit Khanna', 'ENT Specialist', 'rohit.khanna@gmail.com'),
+('Dr. Meera Iyer', 'Dermatologist', 'meera.iyer@gmail.com'),
+('Dr. Sanjay Gupta', 'Pulmonologist', 'sanjay.gupta@gmail.com');
