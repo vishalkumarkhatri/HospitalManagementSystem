@@ -27,11 +27,12 @@ public class PatientTests {
     private PatientService patientService;
 
 
-//    @Test
-//    public void testPatientRepository(){
+    @Test
+    public void testPatientRepository(){
 //        List<Patient> patientList = patientRepository.findAll();
-//        System.out.println(patientList);
-//    }
+        List<Patient> patientList = patientRepository.findAllpatientAppointment();
+        System.out.println(patientList);
+    }
 
     @Test
     public void testTransactionsMethod() {
